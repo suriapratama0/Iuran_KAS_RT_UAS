@@ -1,0 +1,14 @@
+thead{
+    background-color: lightblue;
+    height: 50px;
+    border-color: black;
+}
+table{
+    background-color: lightgray;
+    border-color: black;
+}
+button{
+    border: 1px solid black;
+    
+}
+
