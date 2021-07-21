@@ -12,8 +12,9 @@
 		td{
 			text-align: center;
 		}
-		button{
+		.tombol button{
 			margin: 10px 10px;
+			border: 1px solid black;
 		}
 		thead{
 			background-color: lightblue;
@@ -24,22 +25,61 @@
 			background-color: lightgray;
 			border-color: black;
 		}
-		button{
-			border: 1px solid black;
+		footer{
+			width: 100%;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #123;
+			color: #ffffff;
+			font-size: 1em;
+			text-transform: uppercase;
+			z-index: 1;
+			bottom: 0px; 	
+		}
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #123;
+		}
+		li{
+			float: left;
+		}
+		li button {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-family: "Times New Roman", Times, serif;
+			font-size: 20px;
+		}
+		li button:hover {
+			background-color: lightblue;
+		}
+		.header{
+			background-color: #123;
+			border-color: lightgrey;
 		}
 	</style>
 </head>
 <body>
 	<h2>Data Warga</h2>
 
-	<p>
-		<button type="button" onclick="window.location='<?php echo site_url('warga/formtambah') ?>'">
+	<nav><ul>
+		<li><button class="header" type="button" onclick="window.location='<?php echo site_url('warga/formtambah') ?>'">
 			Tambah Data Warga
-		</button>
-		<button type="button" onclick="window.location='<?php echo site_url('warga/iuran') ?>'">
+		</button></li>
+		<li><button class="header" type="button" onclick="window.location='<?php echo site_url('warga/iuran') ?>'">
 			Daftar Kas Warga
-		</button>
-	</p>
+		</button></li>
+		<li><button class="header" type="button" onclick="window.location='<?php echo site_url('warga/laporan') ?>'">
+			Laporan
+		</button></li>
+	</ul></nav>
 	<p>
 		Peringatan! Bila ingin Menghapus data warga, anda harus menghapus data kas warga dahulu!!!
 	</p>
@@ -58,7 +98,7 @@
 			</tr>
 		</thead>
 
-		<tbody>
+		<tbody class="tombol">
 			<?php 
 			$nomor = 0;
 			foreach ($tampildata as $row):
@@ -99,3 +139,7 @@
 	</script>
 </body>
 </html>
+	<footer>         
+		<p>&copy; 2021 - Suria Pratama - 311910113 - TI.19.A.1 - Universita Pelita Bangsa.</p>     
+	</footer>
+
