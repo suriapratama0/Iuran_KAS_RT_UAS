@@ -2,7 +2,7 @@
 
 <p> Link Demo aplikasi (Web Host) https://suriapratama0.000webhostapp.com/ </p>
 
-<p> Link Dokumentasi aplikasi Iuran Kas Rt https://youtu.be/AEBeE1YWziA </p>
+<p> Link Dokumentasi aplikasi Iuran Kas Rt/Warga https://youtu.be/GgxDiyKOGTY </p>
 
 # Tampilan Table Iuran
 
