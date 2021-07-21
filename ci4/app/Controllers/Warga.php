@@ -4,6 +4,7 @@ namespace app\Controllers;
 use CodeIgniter\Controller;
 use App\Models\Modelwarga;
 use App\Models\Modeliuran;
+use App\Models\Modellaporan;
 
 class Warga extends Controller
 {
@@ -30,6 +31,15 @@ class Warga extends Controller
 	{
 		helper('form');
 		echo View('viewformtambah');
+	}
+	public function laporan()
+	{
+		$lpr = new Modellaporan();
+		$data = [
+			'tampildata' => $lpr->tampildata()->getResult()
+		];
+		helper('form');
+		echo View('viewlaporan', $data);	
 	}
 	public function simpandata()
 	{
